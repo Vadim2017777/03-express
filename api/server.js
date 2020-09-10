@@ -35,7 +35,7 @@ module.exports = class UsersServer {
 
   initMiddlewares() {
     this.server.use(express.json());
-    this.server.use(cors({ origin: "http://localhost:3000/" }));
+    this.server.use(cors({ origin: process.env.PORT }));
   }
 
   initRoutes() {
@@ -43,7 +43,7 @@ module.exports = class UsersServer {
   }
 
   startListening() {
-    this.server.listen(3000, () => {
+    this.server.listen(process.env.PORT, () => {
       console.log("Start listening on port 3000");
     });
   }
