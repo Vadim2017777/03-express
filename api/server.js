@@ -44,7 +44,7 @@ module.exports = class UsersServer {
 
   startListening() {
     this.server.listen(process.env.PORT, () => {
-      console.log("Start listening on port 3000");
+      console.log(`Start listening on port ${process.env.PORT}`);
     });
   }
 };
