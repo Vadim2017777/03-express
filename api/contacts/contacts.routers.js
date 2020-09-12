@@ -1,5 +1,3 @@
-// const { Router } = require("express");
-
 const express = require("express");
 const userRouter = express.Router();
 const constcontactModel = require("./contacts.controller");
