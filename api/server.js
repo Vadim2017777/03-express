@@ -7,7 +7,9 @@ const mongoose = require("mongoose");
 dotenv.config();
 
 module.exports = class UsersServer {
-  server = null;
+  constructor() {
+    this.server = null;
+  }
 
   start() {
     this.initServer();
